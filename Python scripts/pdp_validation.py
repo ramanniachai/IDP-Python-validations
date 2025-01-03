@@ -10,7 +10,6 @@ from collections import OrderedDict
 
 def get_json_from_api(url):
     try:
-        #response = requests.get(url)
         response = requests.get(url, verify=False)
 
         if response.status_code == 200:
@@ -19,7 +18,7 @@ def get_json_from_api(url):
             print(f"Unable to retrieve data from API, status cide is {response.status_code}")
             data = None
     except requests.exceptions.RequestException as e:
-        print(f"Error while sending API request: {e}")
+        print(f"Error while sending API requiest: {e}")
         data = None
         
     return data
@@ -55,7 +54,6 @@ def retrieve_the_whole_structure_of_items_excel1(api, category, new_products):
 
     for product_values in api['products'].values():
         items = list(product_values['items'].values())
-        #sorted_items = sorted(items, key=lambda item: size_order.index(size_id_to_name[item["sizeGroupId"]]))
         sorted_items = sorted(items, key=lambda item: size_order.index(size_id_to_name.get(item.get("sizeGroupId", ""), "NONE")))
         product_values['items'] = {item['id']: item for item in sorted_items}
 
@@ -70,7 +68,6 @@ def retrieve_the_whole_structure_of_items_excel1(api, category, new_products):
     for i in category:  
 
         for product_values in sorted_products:
-        #for product_values in api['products'].values():
             for items_keys, items_values in product_values['items'].items():
 
                 item_category = items_values.get('categoryIds')
@@ -109,7 +106,6 @@ def retrieve_the_whole_structure_of_items_excel1(api, category, new_products):
                     sorted_itemModifierGroups = sorted(itemModifierGroups, key=lambda x: x.get('sequence', 0))
 
 
-                    #for itemModifierGroups_list_values in itemModifierGroups:
                     for itemModifierGroups_list_values in sorted_itemModifierGroups:
                         row = [None]*70
                         modifierGroup = itemModifierGroups_list_values.get('productGroupId')
