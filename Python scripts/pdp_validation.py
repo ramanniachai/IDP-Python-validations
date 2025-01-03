@@ -6,13 +6,6 @@ from requests.packages.urllib3.exceptions import InsecureRequestWarning
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 from collections import OrderedDict
 
-#with open('testing_PDP copy.json', 'r', encoding='utf8') as f:
- #   info = json.load(f)
-
-with open('testing_PDP copy 2.json', 'r', encoding='utf8') as f:
-    info = json.load(f)
-
-
 
 
 def get_json_from_api(url):
@@ -23,10 +16,10 @@ def get_json_from_api(url):
         if response.status_code == 200:
             data = json.loads(response.content.decode('utf-8'))
         else:
-            print(f"не удалось получить данные из API, код ответа {response.status_code}")
+            print(f"Unable to retrieve data from API, status cide is {response.status_code}")
             data = None
     except requests.exceptions.RequestException as e:
-        print(f"Ошибка при отправке запроса к API: {e}")
+        print(f"Error while sending API requiest: {e}")
         data = None
         
     return data
@@ -132,8 +125,6 @@ def retrieve_the_whole_structure_of_items_excel1(api, category, new_products):
                         if modifierGroup:
                             row[columnIndex] = modifierGroup_dict.get(modifierGroup)
                             columnIndex += 1
-                        #for itemModifiers_values in itemModifiers.values():
-                        #for itemModifiers_values in sorted(list(itemModifiers.values()), key=lambda x: items_dict.get(x.get('itemId'))):
                         sorted_itemModifiers = sorted(list(itemModifiers.values()), key=lambda x: x.get('sequence', 0))
                         
 
@@ -145,7 +136,6 @@ def retrieve_the_whole_structure_of_items_excel1(api, category, new_products):
 
                             if not itemModifier2:
                                 singleModifierId = itemModifiers_values.get('itemId')
-                                #if singleModifierId != 'idp-sdi-mod-000-304':
                                 row[columnIndex] = items_dict.get(singleModifierId)
                                 columnIndex += 1
                              
@@ -163,7 +153,6 @@ def retrieve_the_whole_structure_of_items_excel1(api, category, new_products):
                                     columnIndex += 1
                         data.append(row)
 
-    #df = pd.DataFrame(data)
     df = pd.DataFrame(data[1:], columns=data[0])
 
     writer = pd.ExcelWriter('Regresison_UAT2.xlsx', engine='xlsxwriter')
@@ -188,10 +177,8 @@ def retrieve_the_whole_structure_of_items_excel1(api, category, new_products):
     writer._save()
 
 new_products = ['Bacon Deluxe Double SONIC® Smasher', 'Bacon Deluxe Double SONIC® Smasher Combo', 'Bacon Deluxe Triple SONIC® Smasher', 'Bacon Deluxe Triple SONIC® Smasher Combo', 'Sour Dragon Fruit Recharger with Red Bull®', 'Strawberry Fusion Fizz', 'Grape Escape', 'Buttery Brew', 'The Pairs', 'The Nicole', 'Double SONIC Queso Smasher', 'Triple SONIC Queso Smasher', 'Red Velvet Cake Batter Shake', '$4.99 Feast']
-#category = ['idp-sdi-cat-000-012', 'idp-sdi-cat-000-015', 'idp-sdi-cat-000-016', 'idp-sdi-cat-000-017', 'idp-sdi-cat-000-018', 'idp-sdi-cat-000-019', 'idp-sdi-cat-000-067']
 category = ['idp-sdi-cat-000-067', 'idp-sdi-cat-000-013', 'idp-sdi-cat-000-014', 'idp-sdi-cat-000-015', 'idp-sdi-cat-000-016', 'idp-sdi-cat-000-017', 'idp-sdi-cat-000-018', 'idp-sdi-cat-000-019', 'idp-sdi-cat-000-021', 'idp-sdi-cat-000-022', 'idp-sdi-cat-000-038', 'idp-sdi-cat-000-039', 'idp-sdi-cat-000-049', 'idp-sdi-cat-000-052', 'idp-sdi-cat-000-051', 'idp-sdi-cat-000-053', 'idp-sdi-cat-000-027', 'idp-sdi-cat-000-028' , 'idp-sdi-cat-000-024', 'idp-sdi-cat-000-025', 'idp-sdi-cat-000-034', 'idp-sdi-cat-000-035', 'idp-sdi-cat-000-036', 'idp-sdi-cat-000-032', 'idp-sdi-cat-000-030', 'idp-sdi-cat-000-031', 'idp-sdi-cat-000-010', 'idp-sdi-cat-000-009', 'idp-sdi-cat-000-075', 'idp-sdi-cat-000-077', 'idp-sdi-cat-000-095', 'idp-sdi-cat-000-089', 'idp-sdi-cat-000-090', 'idp-sdi-cat-000-091', 'idp-sdi-cat-000-092', 'idp-sdi-cat-000-096', 'idp-sdi-cat-000-097', 'idp-sdi-cat-000-098', 'idp-sdi-cat-000-003', 'idp-sdi-cat-000-068']
-#category = ['idp-sdi-cat-000-067', 'idp-sdi-cat-000-013', 'idp-sdi-cat-000-014', 'idp-sdi-cat-000-015', 'idp-sdi-cat-000-016', 'idp-sdi-cat-000-017', 'idp-sdi-cat-000-018', 'idp-sdi-cat-000-019', 'idp-sdi-cat-000-021', 'idp-sdi-cat-000-022', 'idp-sdi-cat-000-038', 'idp-sdi-cat-000-039', 'idp-sdi-cat-000-049', 'idp-sdi-cat-000-052', 'idp-sdi-cat-000-051', 'idp-sdi-cat-000-053', 'idp-sdi-cat-000-027', 'idp-sdi-cat-000-028' , 'idp-sdi-cat-000-024', 'idp-sdi-cat-000-025', 'idp-sdi-cat-000-034', 'idp-sdi-cat-000-035', 'idp-sdi-cat-000-068', 'idp-sdi-cat-000-032', 'idp-sdi-cat-000-030', 'idp-sdi-cat-000-031', 'idp-sdi-cat-000-010', 'idp-sdi-cat-000-009', 'idp-sdi-cat-000-077', 'idp-sdi-cat-000-083', 'idp-sdi-cat-000-081', 'idp-sdi-cat-000-085', 'idp-sdi-cat-000-084', 'idp-sdi-cat-000-079', 'idp-sdi-cat-000-078']
-#category = ['idp-sdi-cat-000-085', 'idp-sdi-cat-000-083']
+
 
 
 #api_url = f"https://api-idp.sonicdrivein.com/snc/menu-api/menu/v1/brand/SDI/location/6273/channel/WEBOA/type/ALLDAY"
