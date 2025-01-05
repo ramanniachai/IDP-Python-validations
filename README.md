@@ -3,9 +3,16 @@ The repository contains a number of scripts to validate IDP menu.
 
 This file contans some explanation for each script added to this repository.
 
-1. pdp_validation: There're 2 files in this folder. At first you need to work with 'pdp_validation.py' file. The script in this file
-should be executed for the old menu in API and for the new one. So the script should be executed twice. As a result, you'll get 2 excel
-file with detailed products' structure. 
-Then we need to execute 'pdp_file_c.py' script. This script compares 2 excel file and generated log file when you can find discrepancies 
-in the menu if there're any.
+1. pdp_validation: This folder contains two files. First, you need to work with the pdp_validation.py file. The script in this 
+file should be executed twice: once for the old menu in the API and once for the new menu. As a result, you will obtain two Excel files 
+with detailed product structures. Next, execute the pdp_file_c.py script. This script compares the two Excel files and generates a log file 
+where you can find any discrepancies in the menu, if there are any.
+
+
+2. min_value_if_whatsOnIt.py: This script checks whether the number of single/obligatory modifiers corresponds to the ‘min’ value of the 
+modifier group ‘What’s on It’. In cases of any discrepancies, it will cause an error before checkout. 
+
+3. price_validation.py: This script allows you to retrieve prices for new products across all locations. The results will be mapped to a .txt file, 
+which can be uploaded to Power BI for better visual representation of the results.
+
 
