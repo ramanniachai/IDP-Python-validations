@@ -259,8 +259,8 @@ def price_in_newProducts(api, location):
 data_list = []
 for location in all_locations:
     result = {}
-    #api_url = f"https://api-idp.sonicdrivein.com/snc/menu-api/menu/v1/brand/SDI/location/{location}/channel/WEBOA/type/ALLDAY"
-    api_url = f"https://menu-api-v0.snc-api.uat.irb.digital/menu/v1/brand/SDI/location/{location}/channel/WEBOA/type/ALLDAY"
+    api_url = f"https://api-idp.sonicdrivein.com/snc/menu-api/menu/v1/brand/SDI/location/{location}/channel/WEBOA/type/ALLDAY"
+    #api_url = f"https://menu-api-v0.snc-api.uat.irb.digital/menu/v1/brand/SDI/location/{location}/channel/WEBOA/type/ALLDAY"
     #api_url1 = f"https://api-idp.sonicdrivein.com/snc/web-exp-api/v1/menu/type/ALLDAY/id/{location}?sellingChannel=WEBOA"
     api_data = get_json_from_api(api_url)
     if api_data is not None:
