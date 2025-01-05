@@ -177,8 +177,8 @@ category = ['idp-sdi-cat-000-067', 'idp-sdi-cat-000-013', 'idp-sdi-cat-000-014',
 
 
 
-#api_url = f"https://api-idp.sonicdrivein.com/snc/menu-api/menu/v1/brand/SDI/location/6273/channel/WEBOA/type/ALLDAY"
-api_url = f"https://menu-api-v0.snc-api.uat.irb.digital/menu/v1/brand/SDI/location/8810/channel/WEBOA/type/ALLDAY"
+api_url = f"https://api-idp.sonicdrivein.com/snc/menu-api/menu/v1/brand/SDI/location/6273/channel/WEBOA/type/ALLDAY"
+#api_url = f"https://menu-api-v0.snc-api.uat.irb.digital/menu/v1/brand/SDI/location/8810/channel/WEBOA/type/ALLDAY"
 #api_url = f"https://menu-api-v0.snc-api.demo.irb.digital/menu/v1/brand/SDI/location/7996/channel/WEBOA/type/ALLDAY"
 api = get_json_from_api(api_url)
 
