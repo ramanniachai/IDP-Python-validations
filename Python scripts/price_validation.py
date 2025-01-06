@@ -131,16 +131,16 @@ def price_in_newProducts(api, location):
                     item_price = item_values.get('price')
 
                     if item_price:
-                        print(f"{current_utc_time} | {location} | {items_name} {size_id_to_name[item_size]}| {item_price.get('currentPrice')}")
-                        result = f"{current_utc_time} | {location} | {items_name} {size_id_to_name[item_size]}| {item_price.get('currentPrice')}\n"
+                        print(f"{current_utc_time} | {location} | {items_name} {size_id_to_name[item_size]} | {item_price.get('currentPrice')}")
+                        result = f"{current_utc_time} | {location} | {items_name} {size_id_to_name[item_size]} | {item_price.get('currentPrice')}\n"
                         f.write(result)
                     if item_price == {}:
-                        print(f"{current_utc_time} | {location} | {items_name} {size_id_to_name[item_size]}| Empty {{}}")
-                        result = f"{current_utc_time} | {location} | {items_name} {size_id_to_name[item_size]}| Empty{{}}\n"
+                        print(f"{current_utc_time} | {location} | {items_name} {size_id_to_name[item_size]} | Empty {{}}")
+                        result = f"{current_utc_time} | {location} | {items_name} {size_id_to_name[item_size]} | Empty{{}}\n"
                         f.write(result)
                     elif not item_price and item_price != {}:
-                        print(f"{current_utc_time} | {location} | {items_name} {size_id_to_name[item_size]}| No price")
-                        result = f"{current_utc_time} | {location} | {items_name} {size_id_to_name[item_size]}| No price\n"
+                        print(f"{current_utc_time} | {location} | {items_name} {size_id_to_name[item_size]} | No price")
+                        result = f"{current_utc_time} | {location} | {items_name} {size_id_to_name[item_size]} | No price\n"
                         f.write(result)
 
                 if item_id == "idp-sdi-itm-82803-000":
