@@ -16,4 +16,20 @@ modifier group ‘What’s on It’. In cases of any discrepancies, it will caus
 3. price_validation.py: This script allows you to retrieve prices for new products across all locations. The results will be mapped to a .txt file, 
 which can be uploaded to Power BI for better visual representation of the results.
 
+4. PLP autonation folder -> Behave Python folder:
+The "Behave Python" folder contains all necessary components for automated testing of web and mobile applications using the Behave framework and Gherkin language. Here's a brief overview of its structure and the purpose of each component:
+
+features/ Directory: Contains Gherkin .feature files specifying the test scenarios in a human-readable format. It's where the test cases are defined.
+    PLP_validation.feature: Test scenarios for web application validation.
+    PLP_APP_validation.feature: Test scenarios for mobile application validation.
+
+features/steps/ Directory: Contains Python scripts with step definitions for the scenarios described in the .feature files. These scripts translate Gherkin steps into actions.
+    PLP_validation.py: Step definitions for web testing scenarios.
+    PLP_APP_validations.py: Step definitions for mobile app testing scenarios.
+
+environment.py: A configuration file that sets up and tears down the testing environment before and after the test runs. It initializes web or mobile drivers based on the TEST_ENV environment variable.
+
+venv/ Directory: A virtual environment directory containing Python and all necessary packages isolated from the rest of the system. It ensures consistent, reproducible testing environments.
+
+requirements.txt: Lists all Python packages required to run the tests. Use pip install -r requirements.txt to install these dependencies in your virtual environment.
 
