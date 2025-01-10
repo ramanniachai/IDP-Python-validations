@@ -30,7 +30,6 @@ def get_json_from_api(url):
 
 
 
-
 def get_all_locations(api):
     all_locations = []
     for info in api['content']:
