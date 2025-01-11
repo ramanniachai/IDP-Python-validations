@@ -18,7 +18,7 @@ which can be uploaded to Power BI for better visual representation of the result
 
 4. price_validation_ALL_PRODUCTS.py : This script retrieves prices for all products across all locations and maps the results into an Excel file.
 
-5. PLP autonation folder -> Behave Python folder :
+5. PLP automation folder -> Behave Python folder :
 The "Behave Python" folder contains all necessary components for automated testing of web and mobile applications using the Behave framework and Gherkin language. Here's a brief overview of its structure and the purpose of each component:
 
 features/ Directory: Contains Gherkin .feature files specifying the test scenarios in a human-readable format. It's where the test cases are defined.
