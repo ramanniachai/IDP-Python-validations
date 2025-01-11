@@ -115,7 +115,7 @@ def step_impl(context):
 def step_impl(context):
     time.sleep(5)
     expected_items = [
-        "Sparkling Sugar Cookie Dr Pepper®", "Lemonade Cream Cooler", "Rainbow Slush", "Twisted Flamingo", 
+        "Strawberry Shortcake Snowball Slush Float", "Sparkling Sugar Cookie Dr Pepper®", "Lemonade Cream Cooler", "Rainbow Slush", "Twisted Flamingo", 
         "Classic Cruiser", "Dirty Dr Pepper®", 'Sour Dragon Fruit Recharger with Red Bull®', 'Strawberry Fusion Fizz'
 
     ]
@@ -471,8 +471,8 @@ def step_impl(context):
     time.sleep(5)
     expected_items = [
         "Double SONIC® Smasher", "Triple SONIC® Smasher", "Side of Queso", "Bacon Ranch Queso Wrap", 
-        "Southwest Crunch Queso Wrap", 'Bacon Deluxe Double SONIC® Smasher', 'Bacon Deluxe Triple SONIC® Smasher', 'Sour Dragon Fruit Recharger with Red Bull®', 
-        'Strawberry Fusion Fizz'
+        "Southwest Crunch Queso Wrap", 'Bacon Deluxe Double SONIC® Smasher', 'Bacon Deluxe Triple SONIC® Smasher', "Strawberry Shortcake Snowball Slush Float", 
+        'Sour Dragon Fruit Recharger with Red Bull®', 'Strawberry Fusion Fizz'
     ]
 
     product_containers = WebDriverWait(context.browser, 20).until(

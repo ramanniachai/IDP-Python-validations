@@ -1,0 +1,34 @@
+{
+  "Explain Broken_prompt": {
+    "description": "Explain what is wrong with the code",
+    "template": "Explain_Broken.yaml",
+    "external": false
+  },
+  "Refactor This_prompt": {
+    "description": "Refactors the code to be more readable",
+    "template": "Refactor_This.yaml",
+    "external": false
+  },
+  "Comment Code_prompt": {
+    "description": "Add comments to the code",
+    "template": "Comment_Code.yaml",
+    "external": false
+  },
+  "Add Unit Tests_prompt": {
+    "description": "Create unit-tests for selected code",
+    "template": "Add_Unit_Tests.yaml",
+    "external": false
+  },
+  "Code Me This_prompt": {
+    "description": "Generate code based on the comment",
+    "template": "Code_Me_This.yaml",
+    "external": false
+  },
+  "Code Explanator_prompt": {
+    "description": "This is the prompt which I use to analyze the code to get it muc",
+    "external": true,
+    "userSettings": {},
+    "prompt_type": "PROMPT",
+    "prompt_id": 3
+  }
+}

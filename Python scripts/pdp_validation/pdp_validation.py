@@ -25,7 +25,7 @@ def get_json_from_api(url):
 
 
 
-def retrieve_the_whole_structure_of_items_excel1(api, category, new_products):
+def retrieve_the_whole_structure_of_items_excel(api, category, new_products):
     modifierGroup_dict = {}
     items_dict = {}
     intensityGroup_dict = {}
@@ -151,7 +151,7 @@ def retrieve_the_whole_structure_of_items_excel1(api, category, new_products):
 
     df = pd.DataFrame(data[1:], columns=data[0])
 
-    writer = pd.ExcelWriter('Regresison_UAT2.xlsx', engine='xlsxwriter')
+    writer = pd.ExcelWriter('Regresison_PROD_Old_Menu.xlsx', engine='xlsxwriter')
 
     df.to_excel(writer, index=False, sheet_name="Report")
 
@@ -172,7 +172,7 @@ def retrieve_the_whole_structure_of_items_excel1(api, category, new_products):
 
     writer._save()
 
-new_products = ['Bacon Deluxe Double SONIC® Smasher', 'Bacon Deluxe Double SONIC® Smasher Combo', 'Bacon Deluxe Triple SONIC® Smasher', 'Bacon Deluxe Triple SONIC® Smasher Combo', 'Sour Dragon Fruit Recharger with Red Bull®', 'Strawberry Fusion Fizz', 'Grape Escape', 'Buttery Brew', 'The Pairs', 'The Nicole', 'Double SONIC Queso Smasher', 'Triple SONIC Queso Smasher', 'Red Velvet Cake Batter Shake', '$4.99 Feast']
+new_products = ['Strawberry Shortcake Snowball Slush Float']
 category = ['idp-sdi-cat-000-067', 'idp-sdi-cat-000-013', 'idp-sdi-cat-000-014', 'idp-sdi-cat-000-015', 'idp-sdi-cat-000-016', 'idp-sdi-cat-000-017', 'idp-sdi-cat-000-018', 'idp-sdi-cat-000-019', 'idp-sdi-cat-000-021', 'idp-sdi-cat-000-022', 'idp-sdi-cat-000-038', 'idp-sdi-cat-000-039', 'idp-sdi-cat-000-049', 'idp-sdi-cat-000-052', 'idp-sdi-cat-000-051', 'idp-sdi-cat-000-053', 'idp-sdi-cat-000-027', 'idp-sdi-cat-000-028' , 'idp-sdi-cat-000-024', 'idp-sdi-cat-000-025', 'idp-sdi-cat-000-034', 'idp-sdi-cat-000-035', 'idp-sdi-cat-000-036', 'idp-sdi-cat-000-032', 'idp-sdi-cat-000-030', 'idp-sdi-cat-000-031', 'idp-sdi-cat-000-010', 'idp-sdi-cat-000-009', 'idp-sdi-cat-000-075', 'idp-sdi-cat-000-077', 'idp-sdi-cat-000-095', 'idp-sdi-cat-000-089', 'idp-sdi-cat-000-090', 'idp-sdi-cat-000-091', 'idp-sdi-cat-000-092', 'idp-sdi-cat-000-096', 'idp-sdi-cat-000-097', 'idp-sdi-cat-000-098', 'idp-sdi-cat-000-003', 'idp-sdi-cat-000-068']
 
 
@@ -182,6 +182,6 @@ api_url = f"https://api-idp.sonicdrivein.com/snc/menu-api/menu/v1/brand/SDI/loca
 #api_url = f"https://menu-api-v0.snc-api.demo.irb.digital/menu/v1/brand/SDI/location/7996/channel/WEBOA/type/ALLDAY"
 api = get_json_from_api(api_url)
 
-retrieve_the_whole_structure_of_items_excel1(api, category, new_products)
+retrieve_the_whole_structure_of_items_excel(api, category, new_products)
 
 

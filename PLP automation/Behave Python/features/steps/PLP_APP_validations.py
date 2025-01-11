@@ -149,7 +149,7 @@ def find_product_elements(driver):
 @then("The list of all Flavorista Favorites products is displayed on the screen")
 def step_impl(context):
     expected_products = [
-        "Sparkling Sugar Cookie Dr Pepper®", "Lemonade Cream Cooler", "Rainbow Slush", "Twisted Flamingo", 
+        "Strawberry Shortcake Snowball Slush Float", "Sparkling Sugar Cookie Dr Pepper®", "Lemonade Cream Cooler", "Rainbow Slush", "Twisted Flamingo", 
         "Classic Cruiser", "Dirty Dr Pepper®", 'Sour Dragon Fruit Recharger with Red Bull®', 'Strawberry Fusion Fizz'
     ]
     
@@ -735,8 +735,8 @@ def find_product_elements(driver):
 def step_impl(context):
     expected_products = [
         "Double SONIC® Smasher", "Triple SONIC® Smasher", "Side of Queso", "Bacon Ranch Queso Wrap", 
-        "Southwest Crunch Queso Wrap", 'Bacon Deluxe Double SONIC® Smasher', 'Bacon Deluxe Triple SONIC® Smasher', 'Sour Dragon Fruit Recharger with Red Bull®', 
-        'Strawberry Fusion Fizz'
+        "Southwest Crunch Queso Wrap", 'Bacon Deluxe Double SONIC® Smasher', 'Bacon Deluxe Triple SONIC® Smasher', "Strawberry Shortcake Snowball Slush Float", 
+        'Sour Dragon Fruit Recharger with Red Bull®', 'Strawberry Fusion Fizz'
     ]
     
     found_products = find_product_elements(context.driver)
