@@ -51,11 +51,11 @@ def price_in_newProducts(api, location):
     for size_values in api['sizeGroups'].values():
         size_id_to_name[size_values['id']] = size_values['name'] 
 
-    with open('Raw Prices 01102025.txt', 'a') as f:
+    with open('Raw Prices 01212025.txt', 'a') as f:
         all_items_at_this_location = []
         last_updated_timestamp = api.get('lastUpdatedTimestamp')
         current_utc_time = datetime.utcnow()
-        item_to_check = ['idp-sdi-itm-81730-000', 'idp-sdi-itm-82770-81730-000', 'idp-sdi-itm-81750-000', 'idp-sdi-itm-82780-81750-000', 'idp-sdi-itm-82800-000', 'idp-sdi-itm-82803-000', 'idp-sdi-itm-82804-000', 'idp-sdi-itm-82121-000', 'idp-sdi-itm-82120-000', 'idp-sdi-itm-82122-000', 'idp-sdi-itm-82123-000', 'idp-sdi-itm-82124-000']
+        item_to_check = ['idp-sdi-itm-75330-000']
         for values in api['products'].values():
             product_type = values.get('type')
             for item_keys, item_values in values['items'].items():
