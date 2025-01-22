@@ -797,8 +797,8 @@ def find_product_elements(driver):
 @then("The list of all $1.99 products is displayed on the screen")
 def step_impl(context):
     expected_products = [
-        "Grilled Cheese Burger", "Tots", "Bacon Ranch Queso Wrap", "Southwest Crunch Queso Wrap", 
-        "Small Blue Coconut Cream Slush", "Small Strawberry Cream Slush", "Small Blood Orange Cream Slush"
+        "Grilled Cheese Burger", "Soft Pretzel Twist", "Bacon Ranch Queso Wrap", "Southwest Crunch Queso Wrap", "Small Blue Coconut Cream Slush", "Small Strawberry Cream Slush", 
+        "Small Blood Orange Cream Slush", "Jr. Deluxe Cheeseburger", "Small Coca-Cola® Float", "Small Fanta® Orange Float", "Small Dr Pepper® Float", "Small BARQ’S® Root Beer Float"
     ]
     
     found_products = find_product_elements(context.driver)

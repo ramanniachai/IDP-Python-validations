@@ -172,7 +172,7 @@ def retrieve_the_whole_structure_of_items_excel(api, category, new_products):
 
     writer._save()
 
-new_products = ['Strawberry Shortcake Snowball Slush Float']
+new_products = ['Jr. Deluxe Cheeseburger', 'Small Coca-Cola® Float', 'Small Fanta® Orange Float', 'Small Dr Pepper® Float', 'Small BARQ’S® Root Beer Float', ]
 category = ['idp-sdi-cat-000-067', 'idp-sdi-cat-000-013', 'idp-sdi-cat-000-014', 'idp-sdi-cat-000-015', 'idp-sdi-cat-000-016', 'idp-sdi-cat-000-017', 'idp-sdi-cat-000-018', 'idp-sdi-cat-000-019', 'idp-sdi-cat-000-021', 'idp-sdi-cat-000-022', 'idp-sdi-cat-000-038', 'idp-sdi-cat-000-039', 'idp-sdi-cat-000-049', 'idp-sdi-cat-000-052', 'idp-sdi-cat-000-051', 'idp-sdi-cat-000-053', 'idp-sdi-cat-000-027', 'idp-sdi-cat-000-028' , 'idp-sdi-cat-000-024', 'idp-sdi-cat-000-025', 'idp-sdi-cat-000-034', 'idp-sdi-cat-000-035', 'idp-sdi-cat-000-036', 'idp-sdi-cat-000-032', 'idp-sdi-cat-000-030', 'idp-sdi-cat-000-031', 'idp-sdi-cat-000-010', 'idp-sdi-cat-000-009', 'idp-sdi-cat-000-075', 'idp-sdi-cat-000-077', 'idp-sdi-cat-000-095', 'idp-sdi-cat-000-089', 'idp-sdi-cat-000-090', 'idp-sdi-cat-000-091', 'idp-sdi-cat-000-092', 'idp-sdi-cat-000-096', 'idp-sdi-cat-000-097', 'idp-sdi-cat-000-098', 'idp-sdi-cat-000-003', 'idp-sdi-cat-000-068']
 
 
