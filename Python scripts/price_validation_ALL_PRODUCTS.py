@@ -104,12 +104,12 @@ df.fillna('Not in API', inplace=True)
 location_col = df.pop('location')
 df = df.sort_index(axis=1)
 df.insert(0, 'location', location_col)
-df.to_excel('All_items_All_locations_01_11.xlsx', index=False)
+df.to_excel('All_items_All_locations_01_23.xlsx', index=False)
 #df = pd.DataFrame(data_list, columns=['location', 'item', 'price'])
 #pivot_df = df.pivot(index='item', columns='location', values='price')
 #pivot_df.to_excel('All_items_All_locations2.xlsx')
 # Открываем файл с использованием openpyxl
-wb = load_workbook('All_items_All_locations_01_11.xlsx')
+wb = load_workbook('All_items_All_locations_01_23.xlsx')
 ws = wb.active
 
 # Change column width
@@ -126,7 +126,7 @@ for column in ws.columns:
     ws.column_dimensions[get_column_letter(column[0].column)].width = adjusted_width
 
 # Save changes
-wb.save('All_items_All_locations_01_11.xlsx')
+wb.save('All_items_All_locations_01_23.xlsx')
 
 #print(price_at_all_items4(api_data, location))
 
@@ -134,7 +134,7 @@ wb.save('All_items_All_locations_01_11.xlsx')
 from openpyxl import load_workbook
 
 # open the workbook 
-wb = load_workbook('All_items_All_locations_01_11.xlsx') 
+wb = load_workbook('All_items_All_locations_01_23.xlsx') 
 
 # Select a particular sheet 
 sheet = wb.active 
@@ -146,4 +146,4 @@ for column in sheet.columns:
     sheet.column_dimensions[column.column_letter].width = 20
 
 # Save the workbook
-wb.save('All_items_All_locations_01_11.xlsx')
+wb.save('All_items_All_locations_01_23.xlsx')
