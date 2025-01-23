@@ -4,14 +4,19 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium import webdriver
 
-@given('Sonic web page is opened__')
-def step_given_on_menu_page(context):
+def before_all(context):
     context.browser = webdriver.Chrome()
     context.browser.maximize_window()
-    context.browser.get('https://www.sonicdrivein.com/?locationId=6273')
-    #context.browser.get('https://cfsnc.uat.irb.digital/?locationId=8810')
 
-@when('I reject non-essential cookies and accept the privacy policy')
+def after_all(context):
+    context.browser.quit()
+
+@given('Sonic web page is opened__')
+def step_given_on_menu_page(context):
+    #context.browser.get('https://www.sonicdrivein.com/?locationId=6273')
+    context.browser.get('https://cfsnc.uat.irb.digital/?locationId=8810')
+
+@given('I reject non-essential cookies and accept the privacy policy')
 def step_when_reject_cookies(context):
     try:
         WebDriverWait(context.browser, 10).until(
@@ -64,10 +69,23 @@ def step_then_on_checkout_page(context):
     )
     assert 'checkout' in context.browser.current_url, "Unable to open the checkout page"
 
+@then('I click on the back button')
+def step_then_click_back_button(context):
+    back_button = WebDriverWait(context.browser, 20).until(
+        EC.element_to_be_clickable((By.CSS_SELECTOR, "a.paymentHeader_backContainer__IE_5k"))
+    )
+    back_button.click()
+
 @then('I remove the burger from the bag')
 def step_then_remove_burger_from_bag(context):
     remove_button = WebDriverWait(context.browser, 20).until(
-        EC.element_to_be_clickable((By.XPATH, "//button[text()='Remove']"))
+        EC.element_to_be_clickable((By.XPATH, "//button[@aria-label='remove bag item']"))
     )
     remove_button.click()
-    context.browser.quit()
+
+@then('I close the bag')
+def step_then_close_bag(context):
+    close_button = WebDriverWait(context.browser, 20).until(
+        EC.element_to_be_clickable((By.CSS_SELECTOR, "button.bag_closeButton__F5CVN"))
+    )
+    close_button.click()
