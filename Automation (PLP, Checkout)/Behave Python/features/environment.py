@@ -29,6 +29,7 @@ def before_all(context):
         # chrome_options.add_argument("--headless")
         context.browser = webdriver.Chrome(options=chrome_options)
         context.browser.maximize_window()
+        context.cookies_handled = False
         logger.info("Web environment setup completed.")
     elif test_env == 'app':
         # App testing setup
