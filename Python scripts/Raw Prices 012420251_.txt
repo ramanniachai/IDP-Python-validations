@@ -2186,3 +2186,88 @@
 2025-01-24 15:43:06.661717 | 3637 | Strawberry Shortcake Snowball Slush Float | 2.99
 2025-01-24 15:43:10.955418 | 3638 | Strawberry Shortcake Snowball Slush Float | 2.99
 2025-01-24 15:43:14.598593 | 3639 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:43:17.075000 | 3640 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:43:21.208807 | 3641 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:43:24.784259 | 3642 | Strawberry Shortcake Snowball Slush Float | No price
+2025-01-24 15:43:27.883186 | 3643 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:43:31.305180 | 3644 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:43:34.469975 | 3645 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:43:37.740793 | 3646 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:43:41.782767 | 3647 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:43:44.424769 | 3649 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:43:46.946943 | 3650 | Strawberry Shortcake Snowball Slush Float | No price
+2025-01-24 15:43:50.349476 | 3651 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:43:53.834151 | 3652 | Strawberry Shortcake Snowball Slush Float | No price
+2025-01-24 15:43:56.923345 | 3653 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:43:59.442306 | 3654 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:44:02.920613 | 3655 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:44:05.839494 | 3656 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:44:10.066924 | 3657 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:44:13.850573 | 3659 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:44:17.351035 | 3660 | Strawberry Shortcake Snowball Slush Float | No price
+2025-01-24 15:44:19.662526 | 3661 | Strawberry Shortcake Snowball Slush Float | No price
+2025-01-24 15:44:22.819424 | 3663 | Strawberry Shortcake Snowball Slush Float | No price
+2025-01-24 15:44:26.730491 | 3664 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:44:29.751480 | 3665 | Strawberry Shortcake Snowball Slush Float | No price
+2025-01-24 15:44:33.550892 | 3666 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:44:35.963746 | 3667 | Strawberry Shortcake Snowball Slush Float | No price
+2025-01-24 15:44:39.260806 | 3668 | Strawberry Shortcake Snowball Slush Float | No price
+2025-01-24 15:44:43.179525 | 3670 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:44:46.783850 | 3671 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:44:50.394448 | 3672 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:44:53.353469 | 3673 | Strawberry Shortcake Snowball Slush Float | No price
+2025-01-24 15:44:56.901039 | 3674 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:45:00.344534 | 3675 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:45:03.749259 | 3676 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:45:07.883368 | 3677 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:45:11.174277 | 3678 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:45:14.432901 | 3679 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:45:17.614901 | 3680 | Strawberry Shortcake Snowball Slush Float | No price
+2025-01-24 15:45:21.142863 | 3681 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:45:24.240322 | 3682 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:45:27.631653 | 3683 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:45:31.115880 | 3684 | Strawberry Shortcake Snowball Slush Float | No price
+2025-01-24 15:45:35.409909 | 3685 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:45:39.806942 | 3687 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:45:43.113039 | 3688 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:45:46.789771 | 3689 | Strawberry Shortcake Snowball Slush Float | No price
+2025-01-24 15:45:50.615822 | 3690 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:45:53.613850 | 3691 | Strawberry Shortcake Snowball Slush Float | No price
+2025-01-24 15:45:56.797288 | 3692 | Strawberry Shortcake Snowball Slush Float | No price
+2025-01-24 15:45:59.929997 | 3693 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:46:03.035839 | 3694 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:46:07.734711 | 3695 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:46:10.611668 | 3696 | Strawberry Shortcake Snowball Slush Float | No price
+2025-01-24 15:46:13.854011 | 3697 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:46:16.637935 | 3700 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:46:20.695536 | 3701 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:46:25.136247 | 3703 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:46:29.066591 | 3704 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:46:32.022289 | 3707 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:46:35.281987 | 3708 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:46:38.802819 | 3709 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:46:42.141301 | 3710 | Strawberry Shortcake Snowball Slush Float | No price
+2025-01-24 15:46:44.962459 | 3711 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:46:48.249939 | 3712 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:46:52.121036 | 3713 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:46:54.934331 | 3714 | Strawberry Shortcake Snowball Slush Float | No price
+2025-01-24 15:46:57.083527 | 3715 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:47:00.243203 | 3716 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:47:04.174845 | 3717 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:47:07.595083 | 3718 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:47:11.251521 | 3719 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:47:14.487748 | 3720 | Strawberry Shortcake Snowball Slush Float | No price
+2025-01-24 15:47:17.885601 | 3721 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:47:20.744747 | 3722 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:47:24.072177 | 3723 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:47:27.379550 | 3724 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:47:31.129119 | 3725 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:47:34.136705 | 3726 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:47:38.022170 | 3729 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:47:40.940207 | 3730 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:47:44.745138 | 3731 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:47:48.626313 | 3732 | Strawberry Shortcake Snowball Slush Float | No price
+2025-01-24 15:47:51.791887 | 3733 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:47:54.791286 | 3734 | Strawberry Shortcake Snowball Slush Float | No price
+2025-01-24 15:47:57.185006 | 3735 | Strawberry Shortcake Snowball Slush Float | 2.99
+2025-01-24 15:48:00.300074 | 3736 | Strawberry Shortcake Snowball Slush Float | No price
