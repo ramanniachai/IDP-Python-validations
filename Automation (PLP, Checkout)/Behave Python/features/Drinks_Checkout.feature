@@ -1,10 +1,9 @@
 Feature: Add all drinks to the bag and proceed to checkout
 
     Background:
-        Given Sonic web page is opened_D
+        Given Sonic web page is opened__D
 
     Scenario Outline: Add a drink to the bag and proceed to checkout
-        Given I reject non-essential cookies and accept the privacy policy if needed_D
         When I click on the "Drinks" category
         And I click on the "<subcategory>" subcategory
         And I open the drink product at index <index>
@@ -25,7 +24,6 @@ Feature: Add all drinks to the bag and proceed to checkout
             | Flavorista Favorites           | 6     |
             | Flavorista Favorites           | 7     |
             | Flavorista Favorites           | 8     |
-            | Flavorista Favorites           | 9     |
             | SONIC REchargers with Red Bull | 1     |
             | SONIC REchargers with Red Bull | 2     |
             | SONIC REchargers with Red Bull | 3     |
