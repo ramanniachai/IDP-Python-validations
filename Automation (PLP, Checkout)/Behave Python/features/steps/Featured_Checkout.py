@@ -3,6 +3,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium import webdriver
+import time
 
 def before_all(context):
     context.browser = webdriver.Chrome()
@@ -13,24 +14,33 @@ def after_all(context):
 
 @given('Sonic web page is opened__F')
 def step_given_on_menu_page(context):
-    #context.browser.get('https://www.sonicdrivein.com/?locationId=6273')
     context.browser.get('https://cfsnc.uat.irb.digital/?locationId=8810')
 
 @when('I click on the "Featured" category')
 def step_when_click_featured(context):
     featured_selector = 'a[aria-labelledby="instructions-featured"]'
-    featured_element = WebDriverWait(context.browser, 60).until(
-        EC.element_to_be_clickable((By.CSS_SELECTOR, featured_selector))
-    )
-    featured_element.click()
-
-@when('I open the featured item at index {index}')
-def step_when_open_featured_at_index(context, index):
-    featured_selector = f"div[data-gtm-id='productItem']:nth-child({index}) a"
     featured_element = WebDriverWait(context.browser, 20).until(
         EC.element_to_be_clickable((By.CSS_SELECTOR, featured_selector))
     )
     featured_element.click()
+
+@when('I scroll down to "{subcategory}"')
+def step_impl(context, subcategory):
+    subcategory_selector = f'//h2[text()="{subcategory}"]'
+    subcategory_element = WebDriverWait(context.browser, 20).until(
+        EC.presence_of_element_located((By.XPATH, subcategory_selector))
+    )
+    context.browser.execute_script("arguments[0].scrollIntoView();", subcategory_element)
+    time.sleep(2)
+
+@when('I open the featured item "{item_name}"')
+def step_impl(context, item_name):
+    item_selector = f'//span[text()="{item_name}"]'
+    item_element = WebDriverWait(context.browser, 20).until(
+        EC.element_to_be_clickable((By.XPATH, item_selector))
+    )
+    item_element.click()
+    time.sleep(5)
 
 @when('I add the featured item to the bag')
 def step_when_add_to_bag(context):
