@@ -151,7 +151,7 @@ def retrieve_the_whole_structure_of_items_excel(api, category, new_products):
 
     df = pd.DataFrame(data[1:], columns=data[0])
 
-    writer = pd.ExcelWriter('Regresison_PROD_Old_Menu.xlsx', engine='xlsxwriter')
+    writer = pd.ExcelWriter('Regresison_PROD_New_Menu.xlsx', engine='xlsxwriter')
 
     df.to_excel(writer, index=False, sheet_name="Report")
 
