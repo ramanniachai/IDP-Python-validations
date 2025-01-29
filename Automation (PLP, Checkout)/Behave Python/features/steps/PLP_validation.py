@@ -116,7 +116,7 @@ def step_impl(context):
     time.sleep(5)
     expected_items = [
         "Strawberry Shortcake Snowball Slush Float", "Sparkling Sugar Cookie Dr Pepper®", "Lemonade Cream Cooler", "Rainbow Slush", "Twisted Flamingo", 
-        "Classic Cruiser", "Dirty Dr Pepper®", 'Sour Dragon Fruit Recharger with Red Bull®', 'Strawberry Fusion Fizz'
+        "Dirty Dr Pepper®", 'Sour Dragon Fruit Recharger with Red Bull®', 'Strawberry Fusion Fizz'
 
     ]
     product_containers = WebDriverWait(context.browser, 20).until(
@@ -472,7 +472,6 @@ def step_impl(context):
     expected_items = [
         "Double SONIC® Smasher", "Triple SONIC® Smasher", "Side of Queso", "Bacon Ranch Queso Wrap", 
         "Southwest Crunch Queso Wrap", 'Bacon Deluxe Double SONIC® Smasher', 'Bacon Deluxe Triple SONIC® Smasher', "Strawberry Shortcake Snowball Slush Float", 
-        'Sour Dragon Fruit Recharger with Red Bull®', 'Strawberry Fusion Fizz'
     ]
 
     product_containers = WebDriverWait(context.browser, 20).until(
@@ -504,8 +503,8 @@ def step_impl(context):
 def step_impl(context):
     time.sleep(5)
     expected_items = [
-        "Grilled Cheese Burger", "Soft Pretzel Twist", "Bacon Ranch Queso Wrap", "Southwest Crunch Queso Wrap", "Small Blue Coconut Cream Slush", "Small Strawberry Cream Slush", 
-        "Small Blood Orange Cream Slush", "Jr. Deluxe Cheeseburger", "Small Coca-Cola® Float", "Small Fanta® Orange Float", "Small Dr Pepper® Float", "Small BARQ’S® Root Beer Float"
+        "Soft Pretzel Twist", "Bacon Ranch Queso Wrap", "Southwest Crunch Queso Wrap", "Jr. Deluxe Cheeseburger", "Small Coca-Cola® Float", 
+        "Small Fanta® Orange Float", "Small Dr Pepper® Float", "Small BARQ’S® Root Beer Float", "French Toast Sticks"
     ]
 
     product_containers = WebDriverWait(context.browser, 20).until(

@@ -150,7 +150,7 @@ def find_product_elements(driver):
 def step_impl(context):
     expected_products = [
         "Strawberry Shortcake Snowball Slush Float", "Sparkling Sugar Cookie Dr Pepper®", "Lemonade Cream Cooler", "Rainbow Slush", "Twisted Flamingo", 
-        "Classic Cruiser", "Dirty Dr Pepper®", 'Sour Dragon Fruit Recharger with Red Bull®', 'Strawberry Fusion Fizz'
+        "Dirty Dr Pepper®", 'Sour Dragon Fruit Recharger with Red Bull®', 'Strawberry Fusion Fizz'
     ]
     
     found_products = find_product_elements(context.driver)
@@ -736,7 +736,6 @@ def step_impl(context):
     expected_products = [
         "Double SONIC® Smasher", "Triple SONIC® Smasher", "Side of Queso", "Bacon Ranch Queso Wrap", 
         "Southwest Crunch Queso Wrap", 'Bacon Deluxe Double SONIC® Smasher', 'Bacon Deluxe Triple SONIC® Smasher', "Strawberry Shortcake Snowball Slush Float", 
-        'Sour Dragon Fruit Recharger with Red Bull®', 'Strawberry Fusion Fizz'
     ]
     
     found_products = find_product_elements(context.driver)
@@ -797,8 +796,8 @@ def find_product_elements(driver):
 @then("The list of all $1.99 products is displayed on the screen")
 def step_impl(context):
     expected_products = [
-        "Grilled Cheese Burger", "Soft Pretzel Twist", "Bacon Ranch Queso Wrap", "Southwest Crunch Queso Wrap", "Small Blue Coconut Cream Slush", "Small Strawberry Cream Slush", 
-        "Small Blood Orange Cream Slush", "Jr. Deluxe Cheeseburger", "Small Coca-Cola® Float", "Small Fanta® Orange Float", "Small Dr Pepper® Float", "Small BARQ’S® Root Beer Float"
+        "Soft Pretzel Twist", "Bacon Ranch Queso Wrap", "Southwest Crunch Queso Wrap", "Jr. Deluxe Cheeseburger", "Small Coca-Cola® Float", 
+        "Small Fanta® Orange Float", "Small Dr Pepper® Float", "Small BARQ’S® Root Beer Float", "French Toast Sticks"
     ]
     
     found_products = find_product_elements(context.driver)
