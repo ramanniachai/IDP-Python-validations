@@ -282,3 +282,28 @@ def step_then_close_bag(context):
         EC.element_to_be_clickable((By.CSS_SELECTOR, "button.bag_closeButton__F5CVN"))
     )
     close_button.click()
+
+
+@when('I add all sizes of Snacks & Sides to the bag')
+def step_when_add_all_sizes_to_bag(context):
+    sizes = context.browser.find_elements(By.CSS_SELECTOR, 'div.sdi_productBanner_sizeSelectionWrapper__JwfQ5 button')
+    for index, size in enumerate(sizes):
+        size.click()
+        add_to_bag_button = WebDriverWait(context.browser, 30).until(
+            EC.element_to_be_clickable((By.XPATH, "//button[text()='Add to Bag']"))
+        )
+        add_to_bag_button.click()
+        time.sleep(1)  # Give the page some time to load
+        if index < len(sizes) - 1:
+            close_bag_button = WebDriverWait(context.browser, 30).until(
+                EC.element_to_be_clickable((By.CSS_SELECTOR, "button.bag_closeButton__F5CVN"))
+            )
+            close_bag_button.click()
+            time.sleep(1)  # Give the page some time to load
+
+
+@then('I remove all sizes of Snacks & Sides from the bag')
+def step_then_remove_all_sizes_from_bag(context):
+    remove_buttons = context.browser.find_elements(By.XPATH, "//button[@aria-label='remove bag item']")
+    for remove_button in remove_buttons:
+        remove_button.click()
