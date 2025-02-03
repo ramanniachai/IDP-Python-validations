@@ -8,8 +8,8 @@ requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 def file_comparison_detailed2():
     with open('Log_file.txt', 'w') as f:
-        df1 = pd.read_excel('Regresison_PROD_Old_Menu.xlsx')
-        df2 = pd.read_excel('Regresison_PROD_New_Menu.xlsx')
+        df1 = pd.read_excel('Regression_PROD_Old_Menu.xlsx')
+        df2 = pd.read_excel('Regression_PROD_New_Menu.xlsx')
 
         diff_df = df1.eq(df2)  
         not_matching = diff_df[~diff_df]
