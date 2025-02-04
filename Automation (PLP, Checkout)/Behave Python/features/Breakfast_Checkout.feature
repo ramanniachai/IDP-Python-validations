@@ -1,3 +1,4 @@
+@checkout @breakfast
 Feature: Add all Breakfast products to the bag and proceed to checkout
 
     Background:

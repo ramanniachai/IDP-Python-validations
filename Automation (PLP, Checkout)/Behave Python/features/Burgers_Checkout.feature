@@ -1,4 +1,4 @@
-@checkout
+@checkout @burgers
 Feature: Add all burgers to the bag and proceed to checkout
 
     Background:

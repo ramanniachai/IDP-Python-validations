@@ -1,3 +1,4 @@
+@checkout @drinks
 Feature: Add all sizes of Other drinks to the bag and proceed to checkout
 
     Background:

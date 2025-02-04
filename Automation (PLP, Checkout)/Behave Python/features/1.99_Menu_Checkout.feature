@@ -1,3 +1,4 @@
+@checkout @1.99Menu
 Feature: Add all products to the bag and proceed to checkout
 
     Background:

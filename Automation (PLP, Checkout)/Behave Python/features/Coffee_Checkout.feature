@@ -1,3 +1,4 @@
+@checkout @drinks
 Feature: Add all sizes of Coffee drinks to the bag and proceed to checkout
 
     Background:

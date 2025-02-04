@@ -1,3 +1,4 @@
+@checkout @hotDogs
 Feature: Add all Hot Dogs products to the bag and proceed to checkout
 
     Background:

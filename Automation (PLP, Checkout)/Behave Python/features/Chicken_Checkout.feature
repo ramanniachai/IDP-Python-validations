@@ -1,3 +1,4 @@
+@checkout @chicken
 Feature: Add all Chicken products to the bag and proceed to checkout
 
     Background:

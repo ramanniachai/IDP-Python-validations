@@ -1,3 +1,4 @@
+@checkout @drinks
 Feature: Add all sizes of SONIC Rechargers with Red Bull drinks to the bag and proceed to checkout
 
     Background:

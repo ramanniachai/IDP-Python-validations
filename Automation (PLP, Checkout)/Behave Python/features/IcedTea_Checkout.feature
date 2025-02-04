@@ -1,3 +1,4 @@
+@checkout @drinks
 Feature: Add all sizes of Iced Tea drinks to the bag and proceed to checkout
 
     Background:

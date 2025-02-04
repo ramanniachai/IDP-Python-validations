@@ -1,3 +1,4 @@
+@checkout @carhopClassic
 Feature: Add all Carhop Classics products to the bag and proceed to checkout
 
     Background:

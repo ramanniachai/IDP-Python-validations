@@ -1,3 +1,4 @@
+@checkout @sandwiches
 Feature: Add all Sandwiches products to the bag and proceed to checkout
 
     Background:

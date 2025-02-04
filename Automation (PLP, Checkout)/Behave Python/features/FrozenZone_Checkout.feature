@@ -1,3 +1,4 @@
+@checkout @frozenZone
 Feature: Add all Frozen Zone products to the bag and proceed to checkout
 
     Background:

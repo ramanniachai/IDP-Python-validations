@@ -1,3 +1,4 @@
+@checkout @snacksSides
 Feature: Add all products to the bag and proceed to checkout
 
     Background:

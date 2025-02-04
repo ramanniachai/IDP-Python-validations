@@ -1,3 +1,4 @@
+@checkout @featured
 Feature: Add all featured items to the bag and proceed to checkout
 
     Background:
