@@ -1,3 +1,4 @@
+@checkout
 Feature: Add all Combos products to the bag and proceed to checkout
 
     Background:
