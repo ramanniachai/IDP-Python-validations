@@ -11,8 +11,8 @@ from selenium import webdriver
 
 @given('Sonic web page is opened_')
 def step_impl(context):
-    #context.browser.get('https://www.sonicdrivein.com/?locationId=6273')
-    context.browser.get('https://cfsnc.uat.irb.digital/?locationId=8810')
+    context.browser.get('https://www.sonicdrivein.com/?locationId=6273')
+    #context.browser.get('https://cfsnc.uat.irb.digital/?locationId=8810')
 
     time.sleep(5)
 
