@@ -14,9 +14,8 @@ def after_all(context):
 
 @given('Sonic web page is opened_M')
 def step_given_on_menu_page(context):
-    #context.browser.get('https://www.sonicdrivein.com/?locationId=6273')
-    context.browser.get('https://cfsnc.uat.irb.digital/?locationId=8810')
-
+    context.browser.get('https://www.sonicdrivein.com/?locationId=6273')
+    #context.browser.get('https://cfsnc.uat.irb.digital/?locationId=8810')
 
 @when('I click on the "$1.99 Menu" category')
 def step_when_click_1_99_menu(context):
@@ -26,8 +25,8 @@ def step_when_click_1_99_menu(context):
     )
     menu_element.click()
 
-@when('I open the product at index {index}')
-def step_when_open_product_at_index(context, index):
+@when('I open the product "{product_name}" at index {index}')
+def step_when_open_product_at_index(context, product_name, index):
     product_selector = f"div[data-gtm-id='productItem']:nth-child({index}) a"
     product_element = WebDriverWait(context.browser, 20).until(
         EC.element_to_be_clickable((By.CSS_SELECTOR, product_selector))

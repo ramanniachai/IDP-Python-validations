@@ -14,8 +14,8 @@ def after_all(context):
 
 @given('Sonic web page is opened_S')
 def step_given_on_menu_page(context):
-    context.browser.get('https://cfsnc.uat.irb.digital/?locationId=8810')
-    #context.browser.get('https://www.sonicdrivein.com/?locationId=6273')
+    #context.browser.get('https://cfsnc.uat.irb.digital/?locationId=8810')
+    context.browser.get('https://www.sonicdrivein.com/?locationId=6273')
 
 @when('I click on the "Snacks & Sides" category')
 def step_when_click_snacks_sides(context):
@@ -68,7 +68,7 @@ def step_when_open_ched_r_peppers(context):
  
 @when('I open the Snacks & Sides item "Onion Rings"')
 def step_when_open_onion_rings(context):
-    item_selector = '//a[@href="/menu/snacks-sides/onion-rings/"]'
+    item_selector = '//a[@href="/menu/snacks-sides/hand-made-onion-rings/"]'
     item_element = WebDriverWait(context.browser, 20).until(
         EC.element_to_be_clickable((By.XPATH, item_selector))
     )
@@ -207,7 +207,7 @@ def step_when_scroll_and_open_fritos_chili_cheese_wrap(context):
     )
     context.browser.execute_script("arguments[0].scrollIntoView();", subcategory_element)
     time.sleep(2)
-    item_selector = '//a[@href="/menu/snacks-sides/fritos-chili-cheese-wrap/"]'
+    item_selector = '//a[@href="/menu/snacks-sides/regular-fritos-chili-cheese-wrap/"]'
     item_element = WebDriverWait(context.browser, 20).until(
         EC.element_to_be_clickable((By.XPATH, item_selector))
     )
@@ -227,19 +227,6 @@ def step_when_scroll_and_open_fritos_chili_pie(context):
     )
     item_element.click()
  
-@when('I scroll down to Snacks and open the Snacks & Sides item "Ched \'R\' Bites"')
-def step_when_scroll_and_open_ched_r_bites(context):
-    subcategory_selector = '//h2[@data-testid="Snacks"]'
-    subcategory_element = WebDriverWait(context.browser, 20).until(
-        EC.presence_of_element_located((By.XPATH, subcategory_selector))
-    )
-    context.browser.execute_script("arguments[0].scrollIntoView();", subcategory_element)
-    time.sleep(2)
-    item_selector = '//a[@href="/menu/snacks-sides/ched-r-bites/"]'
-    item_element = WebDriverWait(context.browser, 20).until(
-        EC.element_to_be_clickable((By.XPATH, item_selector))
-    )
-    item_element.click()
 
 @when('I add Snacks & Sides to the bag')
 def step_when_add_to_bag(context):

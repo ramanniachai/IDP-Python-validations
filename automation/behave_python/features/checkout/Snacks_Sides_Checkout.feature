@@ -183,13 +183,3 @@ Feature: Add all products to the bag and proceed to checkout
         And I click on the back button_S
         And I remove all sizes of Snacks & Sides from the bag
         And I close the bag_S
-
-    Scenario: Add Ched 'R' Bites to the bag and proceed to checkout
-        When I click on the "Snacks & Sides" category
-        And I scroll down to Snacks and open the Snacks & Sides item "Ched 'R' Bites"
-        And I add all sizes of Snacks & Sides to the bag
-        And I proceed to checkout_S
-        Then I should be on the checkout page_S
-        And I click on the back button_S
-        And I remove all sizes of Snacks & Sides from the bag
-        And I close the bag_S

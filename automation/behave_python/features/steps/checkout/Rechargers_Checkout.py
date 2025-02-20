@@ -14,8 +14,8 @@ def after_all(context):
 
 @given('Sonic web page is opened__RRB')
 def step_given_on_menu_page(context):
-    #context.browser.get('https://www.sonicdrivein.com/?locationId=6273')
-    context.browser.get('https://cfsnc.uat.irb.digital/?locationId=8810')
+    context.browser.get('https://www.sonicdrivein.com/?locationId=6273')
+    #context.browser.get('https://cfsnc.uat.irb.digital/?locationId=8810')
 
 @when('I click on the "Drinks" category_RRB')
 def step_when_click_drinks(context):
@@ -67,6 +67,7 @@ def step_when_open_red_bull_slush(context):
         EC.element_to_be_clickable((By.XPATH, product_selector))
     )
     product_element.click()
+    time.sleep(1)
 
 @when('I add the drink to the bag_RRB')
 def step_when_add_to_bag(context):
@@ -74,6 +75,7 @@ def step_when_add_to_bag(context):
         EC.element_to_be_clickable((By.XPATH, "//button[text()='Add to Bag']"))
     )
     add_to_bag_button.click()
+    time.sleep(1)
 
 @when('I add all sizes of the drink to the bag_RRB')
 def step_when_add_all_sizes_to_bag(context):

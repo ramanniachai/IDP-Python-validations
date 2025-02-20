@@ -24,6 +24,17 @@ Feature: Add all featured items to the bag and proceed to checkout
         And I remove the featured item from the bag
         And I close the bag_F
 
+    Scenario: Add Strawberry Mangonada Slush to the bag and proceed to checkout
+        When I click on the "Featured" category
+        And I scroll down to "Flavorista Favorites"
+        And I open the featured item "Strawberry Mangonada Slush"_F
+        And I add the featured item to the bag
+        And I proceed to checkout_F
+        Then I should be on the checkout page_F
+        And I click on the back button_F
+        And I remove the featured item from the bag
+        And I close the bag_F
+
     Scenario: Add Strawberry Shortcake Snowball Slush Float to the bag and proceed to checkout
         When I click on the "Featured" category
         And I scroll down to "Flavorista Favorites"

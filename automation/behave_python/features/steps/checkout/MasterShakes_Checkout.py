@@ -43,20 +43,26 @@ def step_when_add_all_sizes_to_bag(context):
             EC.element_to_be_clickable((By.XPATH, "//button[text()='Add to Bag']"))
         )
         add_to_bag_button.click()
-        time.sleep(1)  # Allow the page to process the addition
+        time.sleep(2)  # Allow the page to process the addition
         if index < len(sizes) - 1:
             close_bag_button = WebDriverWait(context.browser, 30).until(
                 EC.element_to_be_clickable((By.CSS_SELECTOR, "button.bag_closeButton__F5CVN"))
             )
             close_bag_button.click()
-            time.sleep(1)  # Allow the page to reload for the next size
+            time.sleep(2)  # Allow the page to reload for the next size
 
 @when('I proceed to checkout_MS')
 def step_when_proceed_to_checkout(context):
-    checkout_button = WebDriverWait(context.browser, 30).until(
-        EC.element_to_be_clickable((By.XPATH, "//button[text()='Checkout']"))
-    )
-    checkout_button.click()
+    try:
+        # Wait for the "Checkout" button to appear and become clickable
+        checkout_button = WebDriverWait(context.browser, 30).until(
+            EC.element_to_be_clickable((By.XPATH, "//button[text()='Checkout']"))
+        )
+        checkout_button.click()
+    except Exception as e:
+        # Log the error for debugging
+        print(f"Error: Unable to locate or click the Checkout button. Exception: {e}")
+        raise
 
 @then('I should be on the checkout page_MS')
 def step_then_on_checkout_page(context):
