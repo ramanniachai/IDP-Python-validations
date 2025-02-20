@@ -4,7 +4,7 @@ Feature: Add all Wacky Pack Kids Meals products to the bag and proceed to checko
     Background:
         Given Sonic web page is opened_W
 
-    Scenario Outline: Add a Wacky Pack Kids Meals product to the bag and proceed to checkout
+    Scenario Outline: Add <product_name> to the bag and proceed to checkout
         When I click on the "Wacky Pack Kids Meals" category
         And I open the Wacky Pack Kids Meals product "<product_name>"
         And I click on the "Next" button_W

@@ -1,4 +1,4 @@
-@checkout @drinks
+@checkout @drinks @softDrinks
 Feature: Add all sizes of Soft Drinks to the bag and proceed to checkout
 
     Background:

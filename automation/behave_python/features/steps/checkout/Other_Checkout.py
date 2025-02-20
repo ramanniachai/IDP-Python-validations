@@ -14,8 +14,8 @@ def after_all(context):
 
 @given('Sonic web page is opened__OT')
 def step_given_on_menu_page(context):
-    #context.browser.get('https://www.sonicdrivein.com/?locationId=6273')
-    context.browser.get('https://cfsnc.uat.irb.digital/?locationId=8810')
+    context.browser.get('https://www.sonicdrivein.com/?locationId=6273')
+    #context.browser.get('https://cfsnc.uat.irb.digital/?locationId=8810')
 
 @when('I click on the "Drinks" category_OT')
 def step_when_click_drinks(context):
@@ -51,7 +51,7 @@ def step_when_open_water(context):
 
 @when('I open the drink product "Minute Maid® 100% Apple Juice Box"')
 def step_when_open_minute_maid_apple_juice_box(context):
-    product_selector = '//a[@href="/menu/drinks/other/minute-maid-100-apple-juice-box/"]'
+    product_selector = '//a[@href="/menu/drinks/other/minute-maid-apple-juice-box/"]'
     product_element = WebDriverWait(context.browser, 30).until(
         EC.element_to_be_clickable((By.XPATH, product_selector))
     )
@@ -59,7 +59,7 @@ def step_when_open_minute_maid_apple_juice_box(context):
 
 @when('I open the drink product "Milk Jug (1%) - White"')
 def step_when_open_milk_jug_white(context):
-    product_selector = '//a[@href="/menu/drinks/other/milk-jug-1-white/"]'
+    product_selector = '//a[@href="/menu/drinks/other/milk-jug-white/"]'
     product_element = WebDriverWait(context.browser, 30).until(
         EC.element_to_be_clickable((By.XPATH, product_selector))
     )

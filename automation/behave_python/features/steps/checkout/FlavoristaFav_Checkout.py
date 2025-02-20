@@ -14,8 +14,8 @@ def after_all(context):
 
 @given('Sonic web page is opened__FF')
 def step_given_on_menu_page(context):
-    #context.browser.get('https://www.sonicdrivein.com/?locationId=6273')
-    context.browser.get('https://cfsnc.uat.irb.digital/?locationId=8810')
+    context.browser.get('https://www.sonicdrivein.com/?locationId=6273')
+    #context.browser.get('https://cfsnc.uat.irb.digital/?locationId=8810')
 
 
 @when('I click on the "Drinks" category')
@@ -36,6 +36,14 @@ def step_when_click_subcategory(context):
         EC.element_to_be_clickable((By.CSS_SELECTOR, subcategory_selector))
     )
     subcategory_element.click()
+
+@when('I open the drink product "Strawberry Mangonada Slush"')
+def step_when_open_strawberry_shortcake_snowball_slush_float(context):
+    product_selector = '//a[@href="/menu/drinks/flavorista-favorites/strawberry-mangonada-slush/"]'
+    product_element = WebDriverWait(context.browser, 30).until(
+        EC.element_to_be_clickable((By.XPATH, product_selector))
+    )
+    product_element.click()
 
 @when('I open the drink product "Strawberry Shortcake Snowball Slush Float"')
 def step_when_open_strawberry_shortcake_snowball_slush_float(context):
@@ -134,13 +142,13 @@ def step_when_add_all_sizes_to_bag(context):
             EC.element_to_be_clickable((By.XPATH, "//button[text()='Add to Bag']"))
         )
         add_to_bag_button.click()
-        time.sleep(2)  # Give the page some time to load
+        time.sleep(1)  # Give the page some time to load
         if index < len(sizes) - 1:
             close_bag_button = WebDriverWait(context.browser, 30).until(
                 EC.element_to_be_clickable((By.CSS_SELECTOR, "button.bag_closeButton__F5CVN"))
             )
             close_bag_button.click()
-            time.sleep(2)  # Give the page some time to load
+            time.sleep(1)  # Give the page some time to load
 
 @then('I remove all sizes of the drink from the bag')
 def step_then_remove_all_sizes_from_bag(context):

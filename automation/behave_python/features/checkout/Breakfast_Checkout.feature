@@ -4,7 +4,7 @@ Feature: Add all Breakfast products to the bag and proceed to checkout
     Background:
         Given Sonic web page is opened_Br
 
-    Scenario Outline: Add a Breakfast product to the bag and proceed to checkout
+    Scenario Outline: Add <product_name> to the bag and proceed to checkout
         When I click on the "Breakfast" category
         And I open the Breakfast product "<product_name>"
         And I add the Breakfast product to the bag

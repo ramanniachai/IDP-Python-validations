@@ -1,8 +1,19 @@
-@checkout @drinks
+@checkout @drinks @flavorista
 Feature: Add all sizes of Flavorista Favorites drinks to the bag and proceed to checkout
 
     Background:
         Given Sonic web page is opened__FF
+
+    Scenario: Add Strawberry Mangonada Slush to the bag and proceed to checkout
+        When I click on the "Drinks" category
+        And I click on the "Flavorista Favorites" subcategory
+        And I open the drink product "Strawberry Mangonada Slush"
+        And I add the drink to the bag
+        And I proceed to checkout_FF
+        Then I should be on the checkout page_FF
+        And I click on the back button_FF
+        And I remove the drink from the bag
+        And I close the bag_FF
 
     Scenario: Add Strawberry Shortcake Snowball Slush Float to the bag and proceed to checkout
         When I click on the "Drinks" category

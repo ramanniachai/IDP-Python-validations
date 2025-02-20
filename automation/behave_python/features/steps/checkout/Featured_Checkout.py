@@ -14,8 +14,8 @@ def after_all(context):
 
 @given('Sonic web page is opened__F')
 def step_given_on_menu_page(context):
-    #context.browser.get('https://www.sonicdrivein.com/?locationId=6273')
-    context.browser.get('https://cfsnc.uat.irb.digital/?locationId=8810')
+    #context.browser.get('https://cfsnc.uat.irb.digital/?locationId=8810')
+    context.browser.get('https://www.sonicdrivein.com/?locationId=6273')
 
 @when('I click on the "Featured" category')
 def step_when_click_featured(context):
@@ -34,9 +34,17 @@ def step_impl(context, subcategory):
     context.browser.execute_script("arguments[0].scrollIntoView();", subcategory_element)
     time.sleep(2)
 
+@when('I open the featured item "Strawberry Mangonada Slush"_F')
+def step_impl(context):
+    item_selector = '//a[@href="/menu/featured/strawberry-mangonada-slush/"]'
+    item_element = WebDriverWait(context.browser, 30).until(
+        EC.element_to_be_clickable((By.XPATH, item_selector))
+    )
+    item_element.click()
+
 @when('I open the featured item "Bacon Deluxe Double SONIC® Smasher"')
 def step_impl(context):
-    item_selector = 'a[href="/menu/featured/bacon-deluxe-double-sonic-smasher/"]'
+    item_selector = 'a[href="/menu/featured/strawberry-mangonada-slush/"]'
     item_element = WebDriverWait(context.browser, 30).until(
         EC.element_to_be_clickable((By.CSS_SELECTOR, item_selector))
     )

@@ -13,8 +13,8 @@ def after_all(context):
 
 @given('Sonic web page is opened__')
 def step_given_on_menu_page(context):
-    #context.browser.get('https://www.sonicdrivein.com/?locationId=6273')
-    context.browser.get('https://cfsnc.uat.irb.digital/?locationId=8810')
+    context.browser.get('https://www.sonicdrivein.com/?locationId=6273')
+    #context.browser.get('https://cfsnc.uat.irb.digital/?locationId=8810')
 
 @given('I reject non-essential cookies and accept the privacy policy')
 def step_when_reject_cookies(context):
@@ -39,12 +39,20 @@ def step_when_click_burgers(context):
         EC.element_to_be_clickable((By.CSS_SELECTOR, burger_selector))
     )
     burger_element.click()
-
+'''
 @when('I open the burger product at index {index}')
 def step_when_open_burger_at_index(context, index):
     burger_selector = f"div[data-gtm-id='productItem']:nth-child({index}) a"
     burger_element = WebDriverWait(context.browser, 20).until(
         EC.element_to_be_clickable((By.CSS_SELECTOR, burger_selector))
+    )
+    burger_element.click()
+'''
+@when('I open the burger product "{product_name}"')
+def step_when_open_chicken_product(context, product_name):
+    burger_selector = f'//span[@title="{product_name}"]/ancestor::a'
+    burger_element = WebDriverWait(context.browser, 20).until(
+        EC.element_to_be_clickable((By.XPATH, burger_selector))
     )
     burger_element.click()
 

@@ -4,7 +4,7 @@ Feature: Add all Sandwiches products to the bag and proceed to checkout
     Background:
         Given Sonic web page is opened_Ss
 
-    Scenario Outline: Add a Sandwiches product to the bag and proceed to checkout
+    Scenario Outline: Add <product_name> to the bag and proceed to checkout
         When I click on the "Sandwiches" category
         And I open the Sandwiches product "<product_name>"
         And I add the Sandwiches product to the bag

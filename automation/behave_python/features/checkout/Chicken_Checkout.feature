@@ -4,7 +4,7 @@ Feature: Add all Chicken products to the bag and proceed to checkout
     Background:
         Given Sonic web page is opened_Cc
 
-    Scenario Outline: Add a Chicken product to the bag and proceed to checkout
+    Scenario Outline: Add <product_name> to the bag and proceed to checkout
         When I click on the "Chicken" category
         And I open the Chicken product "<product_name>"
         And I add the Chicken product to the bag

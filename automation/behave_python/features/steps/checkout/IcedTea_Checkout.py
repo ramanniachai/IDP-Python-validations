@@ -14,8 +14,8 @@ def after_all(context):
 
 @given('Sonic web page is opened__IT')
 def step_given_on_menu_page(context):
-    #context.browser.get('https://www.sonicdrivein.com/?locationId=6273')
-    context.browser.get('https://cfsnc.uat.irb.digital/?locationId=8810')
+    context.browser.get('https://www.sonicdrivein.com/?locationId=6273')
+    #context.browser.get('https://cfsnc.uat.irb.digital/?locationId=8810')
     print("Opened Sonic web page")
 
 @when('I click on the "Drinks" category_IT')
