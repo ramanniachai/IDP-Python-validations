@@ -21,15 +21,15 @@ which can be uploaded to Power BI for better visual representation of the result
 5. automation-> behave_python directory :
 The "behave_python" folder contains all necessary components for automated testing of web and mobile applications using the Behave framework and Gherkin language. Here's a brief overview of its structure and the purpose of each component:
 
-features/ Directory: Contains Gherkin .feature files specifying the test scenarios in a human-readable format. It's where the test cases are defined.
-    plp_web_validation.feature: Test scenarios for web application validation.
-    Plp_app_validation.feature: Test scenarios for mobile application validation.
-    '_Checkout' files: This script simulates the user behavior of opening a product, adding all items to the bag, and navigating to the checkout page.
+features/ Directory: Contains Gherkin .feature files specifying the test scenarios in a human-readable format. It's where the test cases are defined:
+1. plp_web_validation.feature: Test scenarios for web application validation.
+2. Plp_app_validation.feature: Test scenarios for mobile application validation.
+3. '_Checkout' files: This script simulates the user behavior of opening a product, adding all items to the bag, and navigating to the checkout page.
 
-features/steps/ Directory: Contains Python scripts with step definitions for the scenarios described in the .feature files. These scripts translate Gherkin steps into actions.
-    plp_web_validation.py: Step definitions for web testing scenarios.
-    Plp_app_validations.py: Step definitions for mobile app testing scenarios.
-   '_Checkout' files: Step definitions to simulate product checkout.
+features/steps/ Directory: Contains Python scripts with step definitions for the scenarios described in the .feature files. These scripts translate Gherkin steps into actions:
+1. plp_web_validation.py: Step definitions for web testing scenarios.
+2. Plp_app_validations.py: Step definitions for mobile app testing scenarios.
+3.'_Checkout' files: Step definitions to simulate product checkout.
 
 environment.py: A configuration file that sets up and tears down the testing environment before and after the test runs. It initializes web or mobile drivers based on the TEST_ENV environment variable.
 
