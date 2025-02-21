@@ -55,7 +55,7 @@ def price_in_newProducts(api, location):
         all_items_at_this_location = []
         last_updated_timestamp = api.get('lastUpdatedTimestamp')
         current_utc_time = datetime.utcnow()
-        item_to_check = ['idp-sdi-itm-31600-000', 'idp-sdi-itm-60092-000', 'idp-sdi-itm-60202-000', 'idp-sdi-itm-60102-000', 'idp-sdi-itm-60112-000']
+        item_to_check = ['idp-sdi-itm-81430-000']
         for values in api['products'].values():
             product_type = values.get('type')
             for item_keys, item_values in values['items'].items():
