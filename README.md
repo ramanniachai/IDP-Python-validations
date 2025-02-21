@@ -29,7 +29,7 @@ features/ Directory: Contains Gherkin .feature files specifying the test scenari
 features/steps/ Directory: Contains Python scripts with step definitions for the scenarios described in the .feature files. These scripts translate Gherkin steps into actions:
 1. plp_web_validation.py: Step definitions for web testing scenarios.
 2. Plp_app_validations.py: Step definitions for mobile app testing scenarios.
-3. 3.'_Checkout' files: Step definitions to simulate product checkout.
+3. '_Checkout' files: Step definitions to simulate product checkout.
 
 environment.py: A configuration file that sets up and tears down the testing environment before and after the test runs. It initializes web or mobile drivers based on the TEST_ENV environment variable.
 
