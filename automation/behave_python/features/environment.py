@@ -1,6 +1,7 @@
 import os
 import logging
 import time
+import sys
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options as ChromeOptions
 from appium import webdriver as appium_webdriver
@@ -18,6 +19,13 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 def before_all(context):
+    steps_dir = os.path.join(os.path.dirname(__file__), 'steps')
+    for root, dirs, files in os.walk(steps_dir):
+        sys.path.append(root)
+    logger.info(f"Added the following paths to Python path: {sys.path}")
+
+
+
     # Determine the testing environment from the TEST_ENV environment variable
     test_env = os.getenv('TEST_ENV', 'web').lower()
     
