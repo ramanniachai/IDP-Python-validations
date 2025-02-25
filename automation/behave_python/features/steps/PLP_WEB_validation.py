@@ -71,7 +71,8 @@ def step_impl(context):
         "SuperSONIC® Bacon Double Cheeseburger Combo", "Chili Cheese Coney Combo", "All-American Hot Dog Combo", "Footlong Quarter Pound Coney Combo",
         "Premium Chicken Bites Combo", "3 Piece Crispy Tenders Combo", "5 Piece Crispy Tenders Combo", "Crispy Chicken Sandwich Combo",
         "Ultimate Meat & Cheese Breakfast Burrito™ Combo", "SuperSONIC® Breakfast Burrito Combo", "Bacon Breakfast Burrito Combo", "Sausage Breakfast Burrito Combo",
-        "Bacon Breakfast TOASTER® Combo", "Sausage Breakfast TOASTER® Combo", "French Toast Sticks Combo", 'Crispy Tenders Dinner - 3 piece', 'Crispy Tenders Dinner - 3 piece', 'Crispy Tender Dinner - 5 piece', 'Crispy Tender Dinner - 5 piece'
+        "Bacon Breakfast TOASTER® Combo", "Sausage Breakfast TOASTER® Combo", "French Toast Sticks Combo", 'Crispy Tenders Dinner - 3 piece', 'Crispy Tender Dinner - 5 piece',
+        'Fish Sandwich Combo'
     ]
     product_containers = WebDriverWait(context.browser, 20).until(
         EC.presence_of_all_elements_located((By.CSS_SELECTOR, "div._menuCategoryUrl__sectionItemsContainer__rtq1I div[data-gtm-id='productItem']"))
@@ -115,8 +116,8 @@ def step_impl(context):
 def step_impl(context):
     time.sleep(5)
     expected_items = [
-        "Strawberry Shortcake Snowball Slush Float", "Sparkling Sugar Cookie Dr Pepper®", "Lemonade Cream Cooler", "Rainbow Slush", "Twisted Flamingo", 
-        "Dirty Dr Pepper®", 'Sour Dragon Fruit Recharger with Red Bull®', 'Strawberry Fusion Fizz'
+       "Strawberry Mangonada Slush","Strawberry Shortcake Snowball Slush Float", "Sparkling Sugar Cookie Dr Pepper®", "Lemonade Cream Cooler", "Rainbow Slush", "Twisted Flamingo", 
+       "Dirty Dr Pepper®", 'Sour Dragon Fruit Recharger with Red Bull®', 'Strawberry Fusion Fizz'
 
     ]
     product_containers = WebDriverWait(context.browser, 20).until(
@@ -470,8 +471,9 @@ def step_impl(context):
 def step_impl(context):
     time.sleep(5)
     expected_items = [
-        "Double SONIC® Smasher", "Triple SONIC® Smasher", "Side of Queso", "Bacon Ranch Queso Wrap", 
+        "Strawberry Mangonada Slush", "Double SONIC® Smasher", "Triple SONIC® Smasher", "Side of Queso", "Bacon Ranch Queso Wrap", 
         "Southwest Crunch Queso Wrap", 'Bacon Deluxe Double SONIC® Smasher', 'Bacon Deluxe Triple SONIC® Smasher', "Strawberry Shortcake Snowball Slush Float", 
+        "Fish Sandwich" 
     ]
 
     product_containers = WebDriverWait(context.browser, 20).until(
@@ -877,7 +879,7 @@ def step_impl(context):
 def step_impl(context):
     time.sleep(5)
     expected_items = [
-        "Grilled Cheese Sandwich", "Crispy Chicken Sandwich", #"Philly Cheesesteak"
+         "Grilled Cheese Sandwich", "Crispy Chicken Sandwich", "Fish Sandwich" 
     ]
 
     product_containers = WebDriverWait(context.browser, 20).until(

@@ -70,11 +70,12 @@ def find_product_elements(driver):
 def step_impl(context):
     expected_products = [
        'Bacon Deluxe Double SONIC® Smasher Combo', 'Bacon Deluxe Triple SONIC® Smasher Combo', "Triple SONIC® Smasher Combo", "Double SONIC® Smasher Combo", "Cheesy Bacon SONIC® Stack Combo", "Cheesy Bacon SuperSONIC® Stack Combo", 
-        "Garlic Butter Bacon Cheeseburger C...", "Plain SONIC® Cheeseburger Combo", "SONIC® Cheeseburger Combo", "SuperSONIC® Double Cheeseburger C...",
-        "SuperSONIC® Bacon Double Cheeseburger C...", "Chili Cheese Coney Combo", "All-American Hot Dog Combo", "Footlong Quarter Pound Coney Combo",
+        "Garlic Butter Bacon Cheeseburger Combo", "Plain SONIC® Cheeseburger Combo", "SONIC® Cheeseburger Combo", "SuperSONIC® Double Cheeseburger Combo",
+        "SuperSONIC® Bacon Double Cheeseburger Combo", "Chili Cheese Coney Combo", "All-American Hot Dog Combo", "Footlong Quarter Pound Coney Combo",
         "Premium Chicken Bites Combo", "3 Piece Crispy Tenders Combo", "5 Piece Crispy Tenders Combo", "Crispy Chicken Sandwich Combo",
         "Ultimate Meat & Cheese Breakfast Burrito™ Combo", "SuperSONIC® Breakfast Burrito Combo", "Bacon Breakfast Burrito Combo", "Sausage Breakfast Burrito Combo",
-        "Bacon Breakfast TOASTER® Combo", "Sausage Breakfast TOASTER® Com...", "French Toast Sticks Combo", 'Crispy Tenders Dinner - 3 piece', 'Crispy Tenders Dinner - 3 piece', 'Crispy Tender Dinner - 5 piece', 'Crispy Tender Dinner - 5 piece'
+        "Bacon Breakfast TOASTER® Combo", "Sausage Breakfast TOASTER® Combo", "French Toast Sticks Combo", 'Crispy Tenders Dinner - 3 piece', 'Crispy Tender Dinner - 5 piece',
+        'Fish Sandwich Combo'
     ]
     
     found_products = find_product_elements(context.driver)
@@ -149,7 +150,7 @@ def find_product_elements(driver):
 @then("The list of all Flavorista Favorites products is displayed on the screen")
 def step_impl(context):
     expected_products = [
-        "Strawberry Shortcake Snowball Slush Float", "Sparkling Sugar Cookie Dr Pepper®", "Lemonade Cream Cooler", "Rainbow Slush", "Twisted Flamingo", 
+        "Strawberry Mangonada Slush","Strawberry Shortcake Snowball Slush Float", "Sparkling Sugar Cookie Dr Pepper®", "Lemonade Cream Cooler", "Rainbow Slush", "Twisted Flamingo", 
         "Dirty Dr Pepper®", 'Sour Dragon Fruit Recharger with Red Bull®', 'Strawberry Fusion Fizz'
     ]
     
@@ -734,8 +735,9 @@ def find_product_elements(driver):
 @then("The list of all Featured products is displayed on the screen")
 def step_impl(context):
     expected_products = [
-        "Double SONIC® Smasher", "Triple SONIC® Smasher", "Side of Queso", "Bacon Ranch Queso Wrap", 
+        "Strawberry Mangonada Slush", "Double SONIC® Smasher", "Triple SONIC® Smasher", "Side of Queso", "Bacon Ranch Queso Wrap", 
         "Southwest Crunch Queso Wrap", 'Bacon Deluxe Double SONIC® Smasher', 'Bacon Deluxe Triple SONIC® Smasher', "Strawberry Shortcake Snowball Slush Float", 
+        "Fish Sandwich" 
     ]
     
     found_products = find_product_elements(context.driver)
@@ -1634,7 +1636,7 @@ def find_product_elements(driver):
 @then("The list of all Sandwiches products is displayed on the screen")
 def step_impl(context):
     expected_products = [
-        "Grilled Cheese Sandwich", "Crispy Chicken Sandwich", #"Philly Cheesesteak"
+         "Grilled Cheese Sandwich", "Crispy Chicken Sandwich", "Fish Sandwich"
     ]
     
     found_products = find_product_elements(context.driver)
