@@ -46,12 +46,13 @@ all_locations = get_all_locations(api)
 #all_locationss = []
 
 
+
 def price_in_newProducts(api, location):
     size_id_to_name = {}
     for size_values in api['sizeGroups'].values():
         size_id_to_name[size_values['id']] = size_values['name'] 
 
-    with open('Raw Prices 02242025.txt', 'a') as f:
+    with open('Raw Prices 02252025.txt', 'a') as f:
         all_items_at_this_location = []
         last_updated_timestamp = api.get('lastUpdatedTimestamp')
         current_utc_time = datetime.utcnow()
