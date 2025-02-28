@@ -1,44 +1,51 @@
-name: CI Pipeline for Automation Scripts
+name: CI/CD Pipeline for Testing
 
 on:
   push:
     branches:
       - development
+      - main
   pull_request:
     branches:
+      - development
       - main
 
 jobs:
   test:
-    name: Run Tests
     runs-on: ubuntu-latest
 
     steps:
-    # Step 1: Checkout the repository
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v2
 
-    # Step 2: Set up Python
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v2
       with:
-        python-version: '3.11'
+        python-version: '3.x'
 
-    # Step 3: Install dependencies
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install -r automation/behave_python/requirements.txt
 
-    # Step 4: Run Behave tests
     - name: Run Behave tests
       run: |
         cd automation/behave_python
-        behave --junit --junit-directory=junit_results
+        behave
 
-    # Step 5: Upload test results (optional, for reporting)
-    - name: Upload test results
-      uses: actions/upload-artifact@v3
+    - name: Run API validation scripts
+      run: |
+        python python_scripts/min_value_of_whatsOnIt.py
+        python python_scripts/price_validation.py
+        python python_scripts/price_validation_ALL_PRODUCTS.py
+        python python_scripts/pdp_validation/pdp_file_c.py
+        python python_scripts/pdp_validation/pdp_validation.py
+
+    - name: Archive test results
+      if: always()
+      uses: actions/upload-artifact@v2
       with:
         name: test-results
-        path: automation/behave_python/junit_results/
+        path: |
+          automation/behave_python/reports/
+          python_scripts/reports/

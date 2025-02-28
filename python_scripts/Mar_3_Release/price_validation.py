@@ -1,15 +1,8 @@
 import json
 import pandas as pd
 import requests
-import openpyxl
-from collections import defaultdict
-from requests.packages.urllib3.exceptions import InsecureRequestWarning
-requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
-from openpyxl import load_workbook
-from openpyxl.utils import get_column_letter
 from datetime import datetime
-
-
+from findLocations import get_all_location_ids_sanity, get_all_location_ids
 
 
 def get_json_from_api(url):
@@ -29,34 +22,21 @@ def get_json_from_api(url):
     return data
 
 
-
-def get_all_locations(api):
-    all_locations = []
-    for info in api['content']:
-        locationId = info.get('id')
-        all_locations.append(locationId)
-
-    return all_locations
-
-api_url = f"https://location-service-v2.api-idp.sonicdrivein.com/brand/SDI/location?size=10000"
-api = get_json_from_api(api_url)
-
-
-all_locations = get_all_locations(api)
+all_local_locations_sanity = get_all_location_ids_sanity()
+all_local_locations = get_all_location_ids()
 #all_locationss = []
 
-
+item_ids_input = input("Specify item ID/IDs that you wanna check, separated by spaces: ")
+item_to_check = item_ids_input.split()
 
 def price_in_newProducts(api, location):
     size_id_to_name = {}
     for size_values in api['sizeGroups'].values():
         size_id_to_name[size_values['id']] = size_values['name'] 
 
-    with open('Raw Prices 02282025.txt', 'a') as f:
-        all_items_at_this_location = []
+    with open('Raw Prices 03032025.txt', 'a') as f:
         last_updated_timestamp = api.get('lastUpdatedTimestamp')
         current_utc_time = datetime.utcnow()
-        item_to_check = ['idp-sdi-itm-81430-000']
         for values in api['products'].values():
             product_type = values.get('type')
             for item_keys, item_values in values['items'].items():
@@ -100,11 +80,9 @@ def price_in_newProducts(api, location):
 
 
 data_list = []
-for location in all_locations:
+for location in all_local_locations_sanity:
     result = {}
     api_url = f"https://api-idp.sonicdrivein.com/snc/menu-api/menu/v1/brand/SDI/location/{location}/channel/WEBOA/type/ALLDAY"
-    #api_url = f"https://menu-api-v0.snc-api.uat.irb.digital/menu/v1/brand/SDI/location/{location}/channel/WEBOA/type/ALLDAY"
-    #api_url1 = f"https://api-idp.sonicdrivein.com/snc/web-exp-api/v1/menu/type/ALLDAY/id/{location}?sellingChannel=WEBOA"
     api_data = get_json_from_api(api_url)
     if api_data is not None:
         result = price_in_newProducts(api_data, location)

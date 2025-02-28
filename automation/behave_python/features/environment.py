@@ -71,8 +71,8 @@ def after_all(context):
 def after_scenario(context, scenario):
     if os.getenv('TEST_ENV', 'web').lower() == 'web':
         # Example web cleanup action
-        context.browser.get('https://cfsnc.uat.irb.digital/?locationId=8810')
-        #context.browser.get('https://www.sonicdrivein.com/?locationId=6273')
+        #context.browser.get('https://cfsnc.uat.irb.digital/?locationId=8810')
+        context.browser.get('https://www.sonicdrivein.com/?locationId=6273')
     elif hasattr(context, 'driver'):
         # Example app cleanup action
         time.sleep(5)
