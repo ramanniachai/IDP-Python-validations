@@ -225,22 +225,6 @@ Feature: Combos Checkout
         And I remove the Combos product from the bag
         And I close the bag_Co
 
-    Scenario: Add Footlong Quarter Pound Coney Combo to the bag and proceed to checkout
-        Given Sonic web page is opened_Co
-        When I click on the "Combos" category
-        And I open the Combos product "Footlong Quarter Pound Coney Combo"
-        And I click on the "Next" button
-        And I select the side item "Tots"
-        And I click on the "Next" button
-        And I select the drink "Lemonade Cream Cooler"
-        And I click on the "Next" button
-        And I add the Combos product to the bag
-        And I proceed to checkout_Co
-        Then I should be on the checkout page_Co
-        And I click on the back button_Co
-        And I remove the Combos product from the bag
-        And I close the bag_Co
-
     Scenario: Add Premium Chicken Bites Combo to the bag and proceed to checkout
         Given Sonic web page is opened_Co
         When I click on the "Combos" category
@@ -407,6 +391,22 @@ Feature: Combos Checkout
         And I open the Combos product "French Toast Sticks Combo"
         And I click on the "Next" button
         And I select the drink "Strawberry Fusion Fizz"
+        And I click on the "Next" button
+        And I add the Combos product to the bag
+        And I proceed to checkout_Co
+        Then I should be on the checkout page_Co
+        And I click on the back button_Co
+        And I remove the Combos product from the bag
+        And I close the bag_Co
+
+    Scenario: Add Fish Sandwich Combo to the bag and proceed to checkout
+        Given Sonic web page is opened_Co
+        When I click on the "Combos" category
+        And I open the Combos product "Fish Sandwich Combo"
+        And I click on the "Next" button
+        And I select the side item "Groovy Fries"
+        And I click on the "Next" button
+        And I select the drink "Twisted Flamingo"
         And I click on the "Next" button
         And I add the Combos product to the bag
         And I proceed to checkout_Co
