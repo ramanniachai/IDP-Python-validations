@@ -36,5 +36,4 @@ environment.py: A configuration file that sets up and tears down the testing env
 venv/ Directory: A virtual environment directory containing Python and all necessary packages isolated from the rest of the system. It ensures consistent, reproducible testing environments.
 
 requirements.txt: Lists all Python packages required to run the tests. Use pip install -r requirements.txt to install these dependencies in your virtual environment.
-test
 
