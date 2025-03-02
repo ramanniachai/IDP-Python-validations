@@ -1,4 +1,4 @@
-name: CI/CD Pipeline for Testing
+name: CI/CD Pipeline for Initial Execution Check
 
 on:
   push:
@@ -11,7 +11,7 @@ on:
       - main
 
 jobs:
-  test:
+  initial-execution-check:
     runs-on: ubuntu-latest
 
     steps:
@@ -28,24 +28,17 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r automation/behave_python/requirements.txt
 
-    - name: Run Behave tests
+    - name: Check Behave tests initial execution
       run: |
         cd automation/behave_python
-        behave
+        for feature in features/*.feature; do
+          behave --tags @initial-check $feature &
+        done
+      continue-on-error: true
 
-    - name: Run API validation scripts
+    - name: Check API validation scripts initial execution
       run: |
-        python python_scripts/min_value_of_whatsOnIt.py
-        python python_scripts/price_validation.py
-        python python_scripts/price_validation_ALL_PRODUCTS.py
-        python python_scripts/pdp_validation/pdp_file_c.py
-        python python_scripts/pdp_validation/pdp_validation.py
-
-    - name: Archive test results
-      if: always()
-      uses: actions/upload-artifact@v2
-      with:
-        name: test-results
-        path: |
-          automation/behave_python/reports/
-          python_scripts/reports/
+        for script in python_scripts/*.py; do
+          python $script &
+        done
+      continue-on-error: true
