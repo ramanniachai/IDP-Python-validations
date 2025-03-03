@@ -3,6 +3,8 @@ import pandas as pd
 import requests
 from datetime import datetime
 from findLocations import get_all_location_ids_sanity, get_all_location_ids
+import urllib3
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 
 def get_json_from_api(url):
@@ -80,7 +82,7 @@ def price_in_newProducts(api, location):
 
 
 data_list = []
-for location in all_local_locations_sanity:
+for location in all_local_locations:
     result = {}
     api_url = f"https://api-idp.sonicdrivein.com/snc/menu-api/menu/v1/brand/SDI/location/{location}/channel/WEBOA/type/ALLDAY"
     api_data = get_json_from_api(api_url)
